@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clothing Nepal |Ecommerce Website</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #0000FF;
+  color: white;
+  width: 75px;
+}
+
+.fa-twitter {
+  background: #1DA1F2;
+  color: white;
+   width: 75px;
+}
+
+.fa-instagram {
+  background:red;
+  color: white;
+   width: 75px;
+}
+
+
+</style>
+</head>
+<body >
+<div class="header">
+	<div class="container">
+	<div class="navbar">
+	
+		<div class="logo">
+			<a href="home.html">
+			<img src="logo1.png" width="125px" >
+		</a>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="product.html">Product</a></li>
+				<li><a href="About us.html">About Us</a></li>
+				<li><a href="">Contact Us</a></li>
+			</ul>
+		</nav>
+		<img src="cart.png" width="30px" height="30px">
+		
+	</div>
+	<h1 style="text-align: center;">Contact Us</h1>
+	<div class="row">
+		<div class="col-2" style="margin: 50px 0;">
+			<form name="validation" method="get" >
+					<table border="1px solid black;" style="width: 400px; height: 400px;">
+						<tr><td><label>Name</label></td>
+							<td><input type="text" name="name" size="20"></td></tr>
+						<tr><td><label>Age</label></td>
+							<td><input type="number" name="age" size="20"></td></tr>
+						<tr><td>Address</td>
+							<td><input type="text" name="address"></td>
+
+						</tr>
+						<tr><td>Country Name</td>
+							<td>
+								<select name="country">
+									<option value="-1">Select Country</option>
+									<option value="1">Nepal</option>
+									<option value="2">India</option>
+									<option value="3">USA</option>
+									<option value="4">Australia</option>
+								</select>
+							</td>
+						</tr>
+						<tr><td>Gender</td>
+							<td><input type="radio" name="gender" value="Male">Male<br>
+								<input type="radio" name="gender" value="Female">Female<br>
+								<input type="radio" name="gender" value="Others">Others
+							</td>
+						</tr>
+						<tr><td>email</td>
+							<td><input type="text" name="email"size="20"></td>
+						</tr>
+						<tr><td>Phone Number</td>
+							<td><input type="number" name="phone"></td>
+						</tr>
+						<tr><td>Review & Feedback</td>
+							<td><textarea></textarea></td>
+
+						</tr>
+						<tr><td colspan="2">
+							<a href="thankyou.html">
+								<input type="submit" name="validate" value="submit" onclick="validationform()">
+							</a>
+						</td></tr>
+						
+					</table>		
+	</form>
+	<p id="result"></p>
+	<script type="text/javascript">
+     function validationform(){
+
+     	name=document.validation.name.value;
+			age=document.validation.age.value;
+			address=document.validation.address.value;
+			country=document.validation.country.value;
+			group=document.validation.gender.value;
+			email=document.validation.email.value;
+			phone=document.validation.phone.value;
+			var statusText="";
+
+      if (name=="") {
+      alert("please enter your name");
+      return false;
+ }
+      if (age=="") {
+      alert("please enter your age");
+      return false;
+ }
+
+ if(address==""){
+	alert("please enter your  address");
+	return false;
+}
+if(country=="-1"){
+	alert("please select country name");
+	return false;
+}
+
+if(group==""){
+	alert("please select gender");
+	return false;
+}
+
+      if(email==""){
+	    alert("please enter your email");
+	    return false;
+}
+      if(phone==""){
+	    alert("please enter your number");
+	    return false;
+}
+
+return (document.getElementById('result').innerHTML=name+" "+age+" "+address+" "+group+" "+email+" "+phone+" "+statusText);
+
+		}
+
+</script>
+     </div>
+
+		<div class="col-2">
+		<h2 style="margin-bottom: 2px;">Connect With Us...</h2>
+
+<!--- Add font awesome icons--->
+<a href="https://www.facebook.com/" class="fa fa-facebook"></a><br>
+<a href="https://twitter.com/" class="fa fa-twitter"></a><br>
+<a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+    </div>
+</div>
+</div>
+</div>
+	<footer>
+  <p>@2022Clothing Nepal. Built by nikesh sadikshya rashmita<br>
+</footer>
+</body>
+</html>
